@@ -1,0 +1,24 @@
+Problem :- 
+		To retrive the history of the employee.
+		
+Solution :- 
+	Saving part :- 
+	 	We can use the Rank associated with desination :-
+			When a empoyee joint the rank is initialized to 1
+						and history arryList is null
+						
+			when a employee got promoted :-
+				1. Increase the current rank
+				2. get the history of the employee
+					if it is null 
+						then create new entry in the history array;
+					else
+						add one more entry in history array with the current desigantion.
+	retriving part :- 
+	
+		we can Use the sorted History array associated with the each employee;
+		based on the input ex:- last 2 we get the first two entries from the Sorted HashMaap.
+		
+					
+							
+				
