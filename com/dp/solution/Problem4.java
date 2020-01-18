@@ -57,16 +57,35 @@ public class Problem4 {
 		his.desination = emp.currentDesignation;
 		if(Objects.nonNull(emp.previousDesignation))
 		{
+			//this will add based on rank
 			emp.previousDesignation.add(his);
+		}
+		else
+		{
+			emp.previousDesignation = new NavigableSortedSet()
+			emp.previousDesignation.add(his);		
 		}
 		if(!listOfCurrentOrgEmployee.contains(emp))
 		{
 			listOfCurrentOrgEmployee.add(emp);
 		}
 	}
-	public List<History> getTheHisty()
+	public boolean promot(Employee emp,String newDesignation)
 	{
+		History his =new History();
+		his.rank = his.rank + 1;
+		his.desination = emp.currentDesignation;
+		emp.previousDesignation.add(his);
 		
+		emp.currentDesignation = newDesignation;
+		
+	}
+	public List<History> getTheHisty(int count, Employee emp)
+	{
+		//5 4 3 2 1
+		//get last 2  --  4 3
+		List historyList =  new ArrayList();
+		emp.previousDesignation
 	}
 	
 }
