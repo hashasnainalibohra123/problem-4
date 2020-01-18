@@ -1,7 +1,9 @@
 package com.dp.solution;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 
 class History implements Comparable<History>{
 	int rank;
@@ -17,7 +19,7 @@ class Employee
 	String currentDesignation;
 	
 	//setter and getter
-	String SortedSet<History> previousDesignation;
+	SortedSet<History> previousDesignation;
 	
 	@Override
 	public boolean equals(Employee obj) {
@@ -38,15 +40,26 @@ public class Problem4 {
 		//sort the list based on  rank;
 		//Rank is associated with the desination
 		
+		
+		
+		Employee emp = new Employee();
+		emp.name = "test";
+		emp.currentDesignation = "Program- manager"
 		//new employee emp
 		saveToOrg(emp);
-		listOfCurrentOrgEmployee.add(e)
-		Employee emp = new Employee();
+		
 		getTheHisty(emp);
 	}
-	public boolean saveToOrg(emp)
+	public boolean saveToOrg(Employee emp)
 	{
-		if(listOfCurrentOrgEmployee.contains(emp))
+		History his =new History();
+		his.rank = 1;
+		his.desination = emp.currentDesignation;
+		if(Objects.nonNull(emp.previousDesignation))
+		{
+			emp.previousDesignation.add(his);
+		}
+		if(!listOfCurrentOrgEmployee.contains(emp))
 		{
 			listOfCurrentOrgEmployee.add(emp);
 		}
